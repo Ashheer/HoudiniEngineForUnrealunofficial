@@ -14,14 +14,19 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define HOUDINIENGINE_HoudiniInput_generated_h
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_72_GENERATED_BODY \
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_72_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FHoudiniInputSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> HOUDINIENGINE_API UScriptStruct* StaticStruct<struct FHoudiniInputSettings>();
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_INCLASS_NO_PURE_DECLS \
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_SPARSE_DATA
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_ACCESSORS
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHoudiniInput(); \
 	friend struct Z_Construct_UClass_UHoudiniInput_Statics; \
@@ -30,13 +35,13 @@ public: \
 	DECLARE_SERIALIZER(UHoudiniInput)
 
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_ENHANCED_CONSTRUCTORS \
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHoudiniInput(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	UHoudiniInput(UHoudiniInput&&); \
-	UHoudiniInput(const UHoudiniInput&); \
+	NO_API UHoudiniInput(UHoudiniInput&&); \
+	NO_API UHoudiniInput(const UHoudiniInput&); \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UHoudiniInput); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UHoudiniInput); \
@@ -44,19 +49,29 @@ public: \
 	NO_API virtual ~UHoudiniInput();
 
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_156_PROLOG
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_GENERATED_BODY \
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_156_PROLOG
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_INCLASS_NO_PURE_DECLS \
-	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_ENHANCED_CONSTRUCTORS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_SPARSE_DATA \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_ACCESSORS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_INCLASS_NO_PURE_DECLS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_159_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 template<> HOUDINIENGINE_API UClass* StaticClass<class UHoudiniInput>();
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_INCLASS_NO_PURE_DECLS \
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_SPARSE_DATA
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_ACCESSORS
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHoudiniInputHolder(); \
 	friend struct Z_Construct_UClass_UHoudiniInputHolder_Statics; \
@@ -65,13 +80,13 @@ public: \
 	DECLARE_SERIALIZER(UHoudiniInputHolder)
 
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_ENHANCED_CONSTRUCTORS \
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHoudiniInputHolder(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	UHoudiniInputHolder(UHoudiniInputHolder&&); \
-	UHoudiniInputHolder(const UHoudiniInputHolder&); \
+	NO_API UHoudiniInputHolder(UHoudiniInputHolder&&); \
+	NO_API UHoudiniInputHolder(const UHoudiniInputHolder&); \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UHoudiniInputHolder); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UHoudiniInputHolder); \
@@ -79,12 +94,17 @@ public: \
 	NO_API virtual ~UHoudiniInputHolder();
 
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_304_PROLOG
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_GENERATED_BODY \
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_304_PROLOG
+#define FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_INCLASS_NO_PURE_DECLS \
-	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_ENHANCED_CONSTRUCTORS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_SPARSE_DATA \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_ACCESSORS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_INCLASS_NO_PURE_DECLS \
+	FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_307_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -92,7 +112,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> HOUDINIENGINE_API UClass* StaticClass<class UHoudiniInputHolder>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h
+#define CURRENT_FILE_ID FID_UE5_3Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h
 
 
 #define FOREACH_ENUM_EHOUDINIINPUTTYPE(op) \
