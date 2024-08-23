@@ -59,7 +59,7 @@ struct HOUDINIENGINE_API FHoudiniOutputUtils
 		for (TSplitableOutput& SplitableOutput : SplitableOutputs)
 		{
 			if (!ModifySplitValues.Contains(SplitableOutput.GetSplitValue()) && !RemoveSplitValues.Contains(SplitableOutput.GetSplitValue()))
-				OutNewSplitableOutputs.Add(SplitableOutput);  // Means these output does NOT need to modify, just add them to NewMeshOutputs
+				OutNewSplitableOutputs.Add(SplitableOutput);  // Means these output does NOT need to modify, just add them to NewSplitableOutputs
 			else if (Pred(SplitableOutput))
 				OutOldSplitableOutputs.AddTail(&SplitableOutput);
 		}
@@ -109,5 +109,5 @@ struct HOUDINIENGINE_API FHoudiniOutputUtils
 	// -------- Material --------
 	static UMaterialInterface* GetMaterialInstance(UMaterialInterface* Material,
 		const TArray<TSharedPtr<FHoudiniAttribute>>& MatAttribs, const TFunctionRef<int32(const HAPI_AttributeOwner& AttribOwner)> Index,
-		const FString& CookFolderPath, TMap<TPair<UMaterialInterface*, FString>, UMaterialInstance*>& InOutMatParmMap);
+		const FString& CookFolderPath, TMap<TPair<UMaterialInterface*, uint32>, UMaterialInstance*>& InOutMatParmMap);
 };

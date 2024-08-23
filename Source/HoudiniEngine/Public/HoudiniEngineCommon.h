@@ -254,7 +254,7 @@ TEXT("");
 #define HAPI_ATTRIB_PRIMITIVE_ID                            "__primitive_id"
 #define HAPI_ATTRIB_SHARED_MEMORY_PATH                      "__shared_memory_path__"
 #define HAPI_ATTRIB_CURVE_POINT_ID                          "curve_point_id"  // When output curves, hapi will make all pts unique on curves, so this int attrib is using for fuse them
-#define HAPI_ATTRIB_PARTIAL_OUTPUT_MODE			            "partial_output_mode"  // Could be both int or string
+#define HAPI_ATTRIB_PARTIAL_OUTPUT_MODE			            "partial_output_mode"  // Could be either int or string
 #define HAPI_PARTIAL_OUTPUT_MODE_REPLACE		            0  // Full update
 #define HAPI_PARTIAL_OUTPUT_MODE_MODIFY		                1  // Partial update
 #define HAPI_PARTIAL_OUTPUT_MODE_REMOVE		                2  // Partial remove
@@ -263,7 +263,7 @@ TEXT("");
 #define HAPI_ATTRIB_PREFIX_UNREAL_UPROPERTY                 "unreal_uproperty_"
 #define HAPI_ATTRIB_PREFIX_UNREAL_MATERIAL_PARAMETER        "unreal_material_parameter_"
 #define HAPI_ATTRIB_UNREAL_ACTOR_PATH						"unreal_actor_path"
-#define HAPI_ATTRIB_UNREAL_OBJECT_PATH						"unreal_object_path"
+#define HAPI_ATTRIB_UNREAL_OBJECT_PATH						"unreal_object_path"  // Used for almost all input types, and for specify asset path of output mesh, texture, datatable etc.
 #define HAPI_ATTRIB_UNREAL_SPLIT_ATTR						"unreal_split_attr"  // Used for split meshes, curves, and instancers
 #define HAPI_ATTRIB_UNREAL_MATERIAL							"unreal_material"
 #define HAPI_ATTRIB_UNREAL_MATERIAL_INSTANCE				"unreal_material_instance"
@@ -278,7 +278,7 @@ TEXT("");
 
 // -------- Mesh --------
 #define HAPI_ATTRIB_LOD_SCREENSIZE                          "lod_screensize"
-#define HAPI_ATTRIB_UNREAL_OUTPUT_MESH_TYPE		         	"unreal_output_mesh_type"  // Could be both int or string
+#define HAPI_ATTRIB_UNREAL_OUTPUT_MESH_TYPE		         	"unreal_output_mesh_type"  // Could be either int or string
 #define HAPI_UNREAL_OUTPUT_MESH_TYPE_STATICMESH		        0  // Generate UStaticMesh and UStaticMeshComponent
 #define HAPI_UNREAL_OUTPUT_MESH_TYPE_DYNAMICMESH		    1  // Generate UDynamicMeshComponent
 #define HAPI_UNREAL_OUTPUT_MESH_TYPE_HOUDINIMESH		    2  // Generate UHoudiniMeshComponent
@@ -291,7 +291,7 @@ TEXT("");
 
 // -------- Instancer --------
 #define HAPI_ATTRIB_UNREAL_INSTANCE				            "unreal_instance"
-#define HAPI_ATTRIB_UNREAL_OUTPUT_INSTANCE_TYPE             "unreal_output_instance_type"  // Could be both int or string
+#define HAPI_ATTRIB_UNREAL_OUTPUT_INSTANCE_TYPE             "unreal_output_instance_type"  // Could be either int or string
 #define HAPI_UNREAL_OUTPUT_INSTANCE_TYPE_AUTO               0   // Decided by asset to instantiate
 #define HAPI_UNREAL_OUTPUT_INSTANCE_TYPE_ISMC               1
 #define HAPI_UNREAL_OUTPUT_INSTANCE_TYPE_HISMC              2
@@ -317,39 +317,30 @@ TEXT("");
 
 #define HAPI_ATTRIB_UNREAL_LANDSCAPE_HOLE_MATERIAL		    "unreal_landscape_hole_material"
 #define HAPI_ATTRIB_UNREAL_LANDSCAPE_HOLE_MATERIAL_INSTANCE	"unreal_landscape_hole_material_instance"
-#define HAPI_UNREAL_ATTRIB_MATERIAL_HOLE					"unreal_material_hole"  // <Deprecated>, use "unreal_landscape_hole_material" instead
-#define HAPI_UNREAL_ATTRIB_MATERIAL_HOLE_INSTANCE			"unreal_material_hole_instance"  // <Deprecated>, use "unreal_landscape_hole_material_instance" instead
+//#define HAPI_UNREAL_ATTRIB_MATERIAL_HOLE					"unreal_material_hole"  // <Deprecated, Removed>, use "unreal_landscape_hole_material" instead
+//#define HAPI_UNREAL_ATTRIB_MATERIAL_HOLE_INSTANCE			"unreal_material_hole_instance"  // <Deprecated, Removed>, use "unreal_landscape_hole_material_instance" instead
 
 #define HAPI_ATTRIB_UNREAL_LANDSCAPE_OUTPUT_MODE			"unreal_landscape_output_mode"
 #define HAPI_UNREAL_LANDSCAPE_OUTPUT_MODE_GENERATE			0  // Generate a new ALandscape
-#define HAPI_UNREAL_LANDSCAPE_OUTPUT_MODE_MODIFY_LAYER		1  // Write back to exist landscape in current level
+#define HAPI_UNREAL_LANDSCAPE_OUTPUT_MODE_MODIFY_LAYER		1  // Write back to exist landscape in current level (Support landscapes that either have or not have editlayers)
 
-#define HAPI_UNREAL_ATTRIB_LANDSCAPE_EDITLAYER_NAME			"unreal_landscape_editlayer_name"
-#define HAPI_UNREAL_ATTRIB_LANDSCAPE_EDITLAYER_CLEAR		"unreal_landscape_editlayer_clear"  // Clear the editlayer before blitting new data 
-#define HAPI_UNREAL_ATTRIB_LANDSCAPE_EDITLAYER_AFTER		"unreal_landscape_editlayer_after"  // Place the output layer "after" the given layer
+#define HAPI_ATTRIB_UNREAL_LANDSCAPE_EDITLAYER_NAME			"unreal_landscape_editlayer_name"
+//#define HAPI_UNREAL_ATTRIB_LANDSCAPE_EDITLAYER_AFTER		  "unreal_landscape_editlayer_after"  // TODO: Place the output layer "after" the given layer
 
-#define HAPI_UNREAL_ATTRIB_LANDSCAPE_EDITLAYER_TYPE			"unreal_landscape_editlayer_type"
-#define HAPI_UNREAL_LANDSCAPE_EDITLAYER_TYPE_BASE			0  // Base layer: Values will be fit to the min/max height range in UE for optimal resolution.
-#define HAPI_UNREAL_LANDSCAPE_EDITLAYER_TYPE_ADDITIVE		1  // 1 - Additive layer: Values will be scaled similar to the base layer but will NOT be offset
-//     so that it will remain centered around the zero value.
+//#define HAPI_UNREAL_ATTRIB_LANDSCAPE_EDITLAYER_TYPE	      "unreal_landscape_editlayer_type"  // <Deprecated, Removed> Use i@unreal_uproperty_BlendMode instead
 
-// Subtractive mode for paint layers on landscape edit layers
-#define HAPI_UNREAL_ATTRIB_LANDSCAPE_EDITLAYER_SUBTRACTIVE	"unreal_landscape_editlayer_subtractive"
-#define HAPI_UNREAL_LANDSCAPE_EDITLAYER_SUBTRACTIVE_ON		0
-#define HAPI_UNREAL_LANDSCAPE_EDITLAYER_SUBTRACTIVE_OFF		1
+#define HAPI_ATTRIB_UNREAL_LANDSCAPE_EDITLAYER_SUBTRACTIVE	"unreal_landscape_editlayer_subtractive"
+#define HAPI_UNREAL_LANDSCAPE_EDITLAYER_SUBTRACTIVE_OFF		0
+#define HAPI_UNREAL_LANDSCAPE_EDITLAYER_SUBTRACTIVE_ON		1  // Subtractive mode for paint layers on landscape edit layers
 
-#define HAPI_UNREAL_ATTRIB_LANDSCAPE_LAYER_INFO				"unreal_landscape_layer_info"
+#define HAPI_ATTRIB_UNREAL_LANDSCAPE_LAYER_INFO				"unreal_landscape_layer_info"
 
 // -------- Texture --------
-#define HAPI_ATTRIB_UNREAL_TEXTURE_STORAGE                  "unreal_texture_storage"
+#define HAPI_ATTRIB_UNREAL_TEXTURE_STORAGE                  "unreal_texture_storage"  // Could be either int or string
 #define HAPI_UNREAL_TEXTURE_STORAGE_UINT8                   0
 #define HAPI_UNREAL_TEXTURE_STORAGE_FLOAT16                 1
 #define HAPI_UNREAL_TEXTURE_STORAGE_UINT16                  2
 #define HAPI_UNREAL_TEXTURE_STORAGE_FLOAT                   3
-#define HAPI_UNREAL_TEXTURE_STORAGE_STR_UINT8               "uint8"
-#define HAPI_UNREAL_TEXTURE_STORAGE_STR_UINT16              "uint16"
-#define HAPI_UNREAL_TEXTURE_STORAGE_STR_FLOAT16             "float16"
-#define HAPI_UNREAL_TEXTURE_STORAGE_STR_FLOAT               "float"
 
 // -------- Input --------
 #define HAPI_ATTRIB_UNREAL_SPLINE_POINT_ARRIVE_TANGENT      "unreal_spline_point_arrive_tangent"
