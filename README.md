@@ -33,10 +33,11 @@ N.B. This list is NOT completed, for details please see `Source/HoudiniEngine/Pu
 
     See `Source/HoudiniEngine/Public/HoudiniInput.h` and `Source/HoudiniEngine/Public/HoudiniOutput.h`
 02. Light weight, compact usage and panel widgets.
+
 03. ... (And Much More)
 
 **Paramerter**:
-01. Much better nested parameter support.
+01. Much more robust nested parameter support.
 02. All parameters support copy and paste.
 03. Fully Menu support, support menu script (dynamic menu), support "normal", "replace", "toggle" menu types.
 
@@ -66,5 +67,7 @@ N.B. This list is NOT completed, for details please see `Source/HoudiniEngine/Pu
 07. Landscape output support shared memory output (6x faster than official shared-memory session, need to add my sharedmemory_volumeoutput Sop to your HDA)
 08. Class Instancer output is 40x faster than official plug-in, also support instantiate USceneComponent derived Classes
 09. Geometry Collection (Chaos) output as instancers (s@unreal_output_instance_type = "GC"), all of the settings on UGeometryCollection could be set by unreal_uproperty_*, also support split and partial output
+10. Support Static/AnimatedSparseVolumeTexture (VDBs) output
+11. Support Dynamic Mesh (Geometry Script, s@unreal_output_mesh_type = "dynamic") Output
 
-09. ... (And Much More)
+12. ... (And Much More)

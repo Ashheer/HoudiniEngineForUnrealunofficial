@@ -67,7 +67,7 @@ struct HOUDINIENGINE_API FHoudiniEngineUtils
 		const char* AttribName, const int32& DesiredTupleSize, TArray<float>& OutData, HAPI_AttributeOwner& InOutOwner);  // InOutOwner should get by QueryAttributeOwner
 
 	static bool HapiGetStringAttributeValue(const int32& NodeId, const int32& PartId, const TArray<std::string>& AttribNames, const int AttribCounts[HAPI_ATTROWNER_MAX],
-		const char* AttribName, FString& OutValue);
+		const char* AttribName, FString& OutValue, bool* bOutHasAttrib = nullptr);
 
 	static bool HapiGetPrimitiveGroupNames(const HAPI_GeoInfo& GeoInfo, const HAPI_PartInfo& PartInfo, TArray<std::string>& OutPrimGroupNames);
 

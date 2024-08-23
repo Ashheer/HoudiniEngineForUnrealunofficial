@@ -333,6 +333,8 @@ public:
 	virtual bool HasChanged() const { return bHasChanged; }
 };
 
+// Inherit from builder and register using FHoudiniEngine::RegisterInputBuilder
+// The register order of houdini engine itself: StaticMesh < DataTable < Blueprint < FoliageType_InstancedStaticMesh < Texture
 class HOUDINIENGINE_API IHoudiniContentInputBuilder
 {
 public:
@@ -377,6 +379,8 @@ public:
 	virtual bool HapiDestroy(UHoudiniInput* Input) const = 0;  // Will then delete this, so we need NOT to reset node ids to -1
 };
 
+// Inherit from builder and register using FHoudiniEngine::RegisterInputBuilder
+// The register order of houdini engine itself: ActorComponent < MeshComponent < SplineComponent < BrushComponent
 class HOUDINIENGINE_API IHoudiniComponentInputBuilder
 {
 public:
