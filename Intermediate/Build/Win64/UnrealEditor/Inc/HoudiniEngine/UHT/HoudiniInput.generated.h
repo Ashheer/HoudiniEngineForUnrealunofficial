@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
 #ifdef HOUDINIENGINE_HoudiniInput_generated_h
 #error "HoudiniInput.generated.h already included, missing '#pragma once' in HoudiniInput.h"
 #endif
@@ -20,6 +21,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 template<> HOUDINIENGINE_API UScriptStruct* StaticStruct<struct FHoudiniInputSettings>();
+
+#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_147_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execImport);
+
 
 #define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_147_INCLASS_NO_PURE_DECLS \
 private: \
@@ -48,6 +53,7 @@ public: \
 #define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_147_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_147_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_147_INCLASS_NO_PURE_DECLS \
 	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_147_ENHANCED_CONSTRUCTORS \
 private: \
@@ -56,7 +62,12 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 template<> HOUDINIENGINE_API UClass* StaticClass<class UHoudiniInput>();
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_295_INCLASS_NO_PURE_DECLS \
+#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_298_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execRequestReimport); \
+	DECLARE_FUNCTION(execGetAsset);
+
+
+#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_298_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHoudiniInputHolder(); \
 	friend struct Z_Construct_UClass_UHoudiniInputHolder_Statics; \
@@ -65,7 +76,7 @@ public: \
 	DECLARE_SERIALIZER(UHoudiniInputHolder)
 
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_295_ENHANCED_CONSTRUCTORS \
+#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_298_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHoudiniInputHolder(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -79,12 +90,13 @@ public: \
 	NO_API virtual ~UHoudiniInputHolder();
 
 
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_292_PROLOG
-#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_295_GENERATED_BODY \
+#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_295_PROLOG
+#define FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_298_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_295_INCLASS_NO_PURE_DECLS \
-	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_295_ENHANCED_CONSTRUCTORS \
+	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_298_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_298_INCLASS_NO_PURE_DECLS \
+	FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_298_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -102,7 +114,7 @@ template<> HOUDINIENGINE_API UClass* StaticClass<class UHoudiniInputHolder>();
 	op(EHoudiniInputType::Node) \
 	op(EHoudiniInputType::Mask) 
 
-enum class EHoudiniInputType;
+enum class EHoudiniInputType : uint8;
 template<> struct TIsUEnumClass<EHoudiniInputType> { enum { Value = true }; };
 template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniInputType>();
 
@@ -113,7 +125,7 @@ template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniInputType>();
 	op(EHoudiniActorFilterMethod::Tag) \
 	op(EHoudiniActorFilterMethod::Folder) 
 
-enum class EHoudiniActorFilterMethod;
+enum class EHoudiniActorFilterMethod : uint8;
 template<> struct TIsUEnumClass<EHoudiniActorFilterMethod> { enum { Value = true }; };
 template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniActorFilterMethod>();
 
@@ -122,7 +134,7 @@ template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniActorFilterMethod>();
 	op(EHoudiniMaskType::Weight) \
 	op(EHoudiniMaskType::Byte) 
 
-enum class EHoudiniMaskType;
+enum class EHoudiniMaskType : uint8;
 template<> struct TIsUEnumClass<EHoudiniMaskType> { enum { Value = true }; };
 template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniMaskType>();
 
@@ -131,7 +143,7 @@ template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniMaskType>();
 	op(EHoudiniStaticMeshLODImportMethod::LastLOD) \
 	op(EHoudiniStaticMeshLODImportMethod::AllLODs) 
 
-enum class EHoudiniStaticMeshLODImportMethod;
+enum class EHoudiniStaticMeshLODImportMethod : uint8;
 template<> struct TIsUEnumClass<EHoudiniStaticMeshLODImportMethod> { enum { Value = true }; };
 template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniStaticMeshLODImportMethod>();
 
@@ -140,7 +152,7 @@ template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniStaticMeshLODImportMethod
 	op(EHoudiniMeshCollisionImportMethod::ImportWithMesh) \
 	op(EHoudiniMeshCollisionImportMethod::ImportWithoutMesh) 
 
-enum class EHoudiniMeshCollisionImportMethod;
+enum class EHoudiniMeshCollisionImportMethod : uint8;
 template<> struct TIsUEnumClass<EHoudiniMeshCollisionImportMethod> { enum { Value = true }; };
 template<> HOUDINIENGINE_API UEnum* StaticEnum<EHoudiniMeshCollisionImportMethod>();
 
