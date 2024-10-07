@@ -808,10 +808,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(UHoudiniInput);
 UHoudiniInput::~UHoudiniInput() {}
 // End Class UHoudiniInput
 
-// Begin Class UHoudiniInputHolder Function GetAsset
-struct Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics
+// Begin Class UHoudiniInputHolder Function GetObject
+struct Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics
 {
-	struct HoudiniInputHolder_eventGetAsset_Parms
+	struct HoudiniInputHolder_eventGetObject_Parms
 	{
 		TSoftObjectPtr<UObject> ReturnValue;
 	};
@@ -825,30 +825,30 @@ struct Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0014000000000580, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(HoudiniInputHolder_eventGetAsset_Parms, ReturnValue), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::NewProp_ReturnValue,
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0014000000000580, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(HoudiniInputHolder_eventGetObject_Parms, ReturnValue), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::NewProp_ReturnValue,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHoudiniInputHolder, nullptr, "GetAsset", nullptr, nullptr, Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::HoudiniInputHolder_eventGetAsset_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::HoudiniInputHolder_eventGetAsset_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UHoudiniInputHolder_GetAsset()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHoudiniInputHolder, nullptr, "GetObject", nullptr, nullptr, Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::HoudiniInputHolder_eventGetObject_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::HoudiniInputHolder_eventGetObject_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UHoudiniInputHolder_GetObject()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UHoudiniInputHolder_GetAsset_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UHoudiniInputHolder_GetObject_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UHoudiniInputHolder::execGetAsset)
+DEFINE_FUNCTION(UHoudiniInputHolder::execGetObject)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(TSoftObjectPtr<UObject>*)Z_Param__Result=P_THIS->GetAsset();
+	*(TSoftObjectPtr<UObject>*)Z_Param__Result=P_THIS->GetObject();
 	P_NATIVE_END;
 }
-// End Class UHoudiniInputHolder Function GetAsset
+// End Class UHoudiniInputHolder Function GetObject
 
 // Begin Class UHoudiniInputHolder Function RequestReimport
 struct Z_Construct_UFunction_UHoudiniInputHolder_RequestReimport_Statics
@@ -885,7 +885,7 @@ void UHoudiniInputHolder::StaticRegisterNativesUHoudiniInputHolder()
 {
 	UClass* Class = UHoudiniInputHolder::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetAsset", &UHoudiniInputHolder::execGetAsset },
+		{ "GetObject", &UHoudiniInputHolder::execGetObject },
 		{ "RequestReimport", &UHoudiniInputHolder::execRequestReimport },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -911,7 +911,7 @@ struct Z_Construct_UClass_UHoudiniInputHolder_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UHoudiniInputHolder_GetAsset, "GetAsset" }, // 785703061
+		{ &Z_Construct_UFunction_UHoudiniInputHolder_GetObject, "GetObject" }, // 3673112239
 		{ &Z_Construct_UFunction_UHoudiniInputHolder_RequestReimport, "RequestReimport" }, // 3024404460
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -972,10 +972,10 @@ struct Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniE
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UHoudiniInput, UHoudiniInput::StaticClass, TEXT("UHoudiniInput"), &Z_Registration_Info_UClass_UHoudiniInput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHoudiniInput), 2864851119U) },
-		{ Z_Construct_UClass_UHoudiniInputHolder, UHoudiniInputHolder::StaticClass, TEXT("UHoudiniInputHolder"), &Z_Registration_Info_UClass_UHoudiniInputHolder, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHoudiniInputHolder), 2436337603U) },
+		{ Z_Construct_UClass_UHoudiniInputHolder, UHoudiniInputHolder::StaticClass, TEXT("UHoudiniInputHolder"), &Z_Registration_Info_UClass_UHoudiniInputHolder, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHoudiniInputHolder), 3082842627U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_2107459236(TEXT("/Script/HoudiniEngine"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_720706607(TEXT("/Script/HoudiniEngine"),
 	Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5_4Test_Plugins_HoudiniEngine_Source_HoudiniEngine_Public_HoudiniInput_h_Statics::EnumInfo));
